@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <input type="text" id="txt1">
+        <input type="text" id="txt2">
+        <button onClick="sum()">+</button>
+        <p id="sum"></p>
+        <script>
+            function sum() {
+            var first=parseInt(document.getElementById("txt1").value);
+            var second=parseInt(document.getElementById("txt2").value);
+            var sum=first+second;
+            document.getElementById("sum").innerText=sum;
+            }
+        </script>
+        
+    </body>
+</html>

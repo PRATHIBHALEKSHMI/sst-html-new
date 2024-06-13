@@ -1,0 +1,41 @@
+header{
+  background-color:black;
+  display:block;
+}
+nav{
+  display:flex;
+  gap:10px;
+  padding-top:50px;
+  float:right;
+  margin-right:70px;
+}
+.menu-item{
+  display:block;
+  background-color:gold;
+  border-radius:10px;
+}
+.menu-item a{
+  color:white;
+  text-decoration: none;
+  padding:10px 16px;
+  display:block;
+}
+footer{
+    background-color: black;
+    color:white;
+}
+table{
+  background-color: rgb(51, 255, 0);
+  border-radius:10px;
+  height: 40%;
+  width: 40%;
+  text-align:center;
+  margin-left:35%;
+  margin-top:5%;
+}
+button{
+  border-radius:30px;
+  background-color: blueviolet;
+  height: 50%;
+  width: 30%;
+}

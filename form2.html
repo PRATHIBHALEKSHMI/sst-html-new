@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Validator</title>
+    </head>
+    <body>
+        <script>
+            function validateForm(){
+                var name=document.getElementById("name").value;
+                var letters=/^[a-zA-Z\s]+$/;
+                var age=document.getElementById("age").value;
+
+                var password=document.getElementById("password").value;
+                var password2=document.getElementById("password2").value;
+                if(name=="") {
+                   //document.write("Enter Name");
+                document.getElementById("l1").innerHTML="Enter Name";
+                }
+                else if(letters.test(name)==false)
+                {
+                    document.getElementById("l1").innerHTML="Enter valid Alphabets";
+                }
+                if(password=="") {
+                    document.getElementById("l2").innerHTML="Enter Password";
+                }
+                else if(password.length<8)
+                {
+         document.getElementById("l2").innerHTML="Password length should contain maximum 8 character";
+       }
+       if(password2=="") {
+        document.getElementById("l3").innerHTML="Enter confirm password";
+       }
+       else if(password!=password2) {
+        document.getElementById("l3").innerHTML="Enter same password";
+       }
+       if(age==""){
+        document.getElementById("l4").innerHTML="Enter age";
+       }
+       else if(isNaN(age))
+       {
+        document.getElementById("l4").innerHTML="Enter Numeric value";
+       }
+   }   
+        </script>
+        <form>
+            <table border="1">
+                <tr>
+                 <th>Name:</th>
+            <td><input type="text" name="name" id="name"><br></td>
+            <label style=color:blueviolet id="l1"></label>
+          <th>Password:</th>
+          <td><input type="text" id="password"><br></td>
+           <label style=color:blue id="l2"></label>
+           <th>Password2</th>
+           <td><input type="text" id="password2"><br></td>
+           <label style=color:aquamarine id="l3"></label>
+           <th>Age:</th>
+           <td><input type="text" id="age"><br></td>
+           <label id="l4"></label>
+           <td>  <button type="button" onClick="validateForm()">Login</button></td>
+                    </tr>
+            </table>
+        </form>
+    </body>
+</html>
